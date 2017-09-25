@@ -1,3 +1,5 @@
+package Java_Inleiding;
+
 public class Main {
 
     public static void main(String[] args) {
