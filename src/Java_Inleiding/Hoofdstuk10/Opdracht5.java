@@ -51,10 +51,10 @@ public class Opdracht5 extends Applet {
             Invoer = Double.parseDouble(TekstVak1.getText());
 
             if (Invoer >= 5.5) {
-                Regel1 = "Het laatste ingevoerde cijfer was een " + Invoer + " , dit is een voldoende.";
+                Regel1 = "Het laatste ingevoerde cijfer was een " + Invoer + " , dit is een matige voldoende.";
             }
             else {
-                Regel1 = "Het laatste ingevoerde cijfer was een " + Invoer + " , dit is een onvoldoende.";
+                Regel1 = "Het laatste ingevoerde cijfer was een " + Invoer + " , dit is een hele erge onvoldoende.";
             }
 
             cijfers[i] = Invoer;
@@ -68,10 +68,11 @@ public class Opdracht5 extends Applet {
             DecimalFormat formatter = new DecimalFormat("#.#");
 
             if ((gemiddelde / i) > 5.5) {
-                Regel2 = "je gemiddelde is een " + formatter.format((gemiddelde / i)) + ", je bent tot dusver geslaagd!";
+                Regel2 = "je gemiddelde is een " + formatter.format((gemiddelde / i)) + ", je bent tot dusver geslaagd! hopelijk" +
+                        " zien we je nooit meer terug";
             }
             else {
-                Regel2 = "je gemiddelde is een " + formatter.format((gemiddelde / i)) + ", je bent gwn gezakt, hahaha .";
+                Regel2 = "je gemiddelde is een " + formatter.format((gemiddelde / i)) + ", je bent gwn gezakt, hahaha, domme kill .";
             }
 
             Regel3 = "Laatst ingevoerde cijfers:  ";
