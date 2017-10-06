@@ -5,19 +5,23 @@ import java.applet.*;
 import java.awt.event.*;
 
 
-public class Opdracht3 extends Applet {
+public class Opdracht4 extends Applet {
 
     TextField TekstVak1;
+    TextField TekstVak2;
     int Invoer;
+    int InvoerJ;
     String Bericht;
 
     public void init() {
-
         this.setSize(new Dimension(350,150));
         TekstVak1 = new TextField("", 5);
         TekstVak1.addActionListener(new VakListener());
+        TekstVak2 = new TextField("", 5);
+        TekstVak2.addActionListener(new VakListener());
 
         add(TekstVak1);
+        add(TekstVak2);
 
         Bericht = "";
     }
@@ -32,17 +36,26 @@ public class Opdracht3 extends Applet {
         public void actionPerformed(ActionEvent e) {
 
             if (TekstVak1.getText().equals("")){
-                Bericht = "geen maand getypt.";
+                Bericht = "geen maand ingevoerd.";
+            }
+            else if (TekstVak2.getText().equals("")) {
+                Bericht = "geen jaar ingevoerd.";
             }
             else{
                 Invoer = Integer.parseInt(TekstVak1.getText());
+                InvoerJ = Integer.parseInt(TekstVak2.getText());
 
                 switch(Invoer) {
                     case 1 :
                         Bericht = "De 1e maand is januari, deze maand heeft 31 dagen.";
                         break;
                     case 2:
-                        Bericht = "De 2e maand is februari, deze maand heeft 27 dagen.";
+                        if (InvoerJ % 4 == 0){
+                            Bericht = "De 2e maand is februari, deze maand heeft 29 dagen.";
+                        }
+                        else{
+                            Bericht = "De 2e maand is februari, deze maand heeft 28 dagen.";
+                        }
                         break;
                     case 3:
                         Bericht = "De 3e maand is maart, deze maand heeft 31 dagen.";
@@ -76,7 +89,7 @@ public class Opdracht3 extends Applet {
                         break;
 
                     default:
-                        Bericht = "U hebt een ongeldig maand nummer ingevoerd.";
+                        Bericht = "ongeldig maand nummer.";
                         break;
                 }
 
