@@ -11,7 +11,7 @@ public class Opdracht1 extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawLine(800,50,80,300);
+        g.drawLine(80,50,80,300);
         g.drawLine(100,50,100,300);
         g.drawLine(120,50,120,300);
         g.drawLine(140,50,140,300);
