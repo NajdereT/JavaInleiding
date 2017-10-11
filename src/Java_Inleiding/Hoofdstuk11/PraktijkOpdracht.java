@@ -15,8 +15,8 @@ public class PraktijkOpdracht extends Applet {
         tekstvak = new TextField("", 5);
         knop = new Button("Ok");
         knop.addActionListener( new KnopListener() );
-        knop2 = new Button("Volgende tafel");
-        knop2.addActionListener( new KnopListener2() );
+        knop2 = new Button("Volgende tafel");        knop2.addActionListener( new KnopListener2() );
+
 
 
         add(tekstvak);
